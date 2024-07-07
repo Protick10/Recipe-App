@@ -2,8 +2,10 @@ package pro.inc.recipeapp
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.rememberScrollState
@@ -27,10 +29,11 @@ fun CategoryDetailScreen(category: Category){
             .padding(8.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Spacer(modifier = Modifier.height(25.dp))
         Text(text = category.strCategory,
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(8.dp),
-            fontSize = 24.sp,
+            fontSize = 30.sp,
             color = androidx.compose.ui.graphics.Color.Black,
             )
 
@@ -43,7 +46,8 @@ fun CategoryDetailScreen(category: Category){
 
         Text(text = category.strCategoryDescription,
             textAlign = TextAlign.Justify,
-            modifier = Modifier.verticalScroll(rememberScrollState()),
+
+            modifier = Modifier.verticalScroll(rememberScrollState()).padding(8.dp),
             )
 
     }
